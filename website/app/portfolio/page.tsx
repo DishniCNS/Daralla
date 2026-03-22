@@ -4,17 +4,17 @@ import { SectionHeading } from "@/components/section-heading";
 import { portfolioItems } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Daralla",
-  description: "A grid of Daralla studio projects and case studies.",
+  title: "Портфолио | Daralla",
+  description: "Проекты и кейсы Daralla в вебе, 3D, motion и интерактивных форматах.",
 };
 
 export default function PortfolioPage() {
   return (
     <div className="space-y-16 pb-24">
       <SectionHeading
-        eyebrow="Portfolio"
-        title="Project grid"
-        description="A collection of recent studio work spanning product launches, spatial visuals, and interactive campaign experiences."
+        eyebrow="Портфолио"
+        title="Проекты Daralla"
+        description="Подборка студийных работ: сайты для запуска, 3D-визуализация, motion-системы и интерактивные digital-форматы."
       />
 
       <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">

@@ -3,10 +3,10 @@
 import { useState, useTransition, type FormEvent } from "react";
 
 const projectTypes = [
-  "Web Development",
-  "3D Visualization",
-  "Motion Graphics",
-  "Game Development",
+  "Веб-разработка",
+  "3D-визуализация",
+  "Motion graphics",
+  "Разработка игр",
 ] as const;
 
 const initialFormState = {
@@ -21,20 +21,20 @@ const studioEmail = "hello@daralla.studio";
 
 function buildRequestSummary(formState: typeof initialFormState) {
   return [
-    "Daralla Project Request",
+    "Запрос на проект Daralla",
     "",
-    `Client name: ${formState.clientName}`,
+    `Имя клиента: ${formState.clientName}`,
     `Email: ${formState.email}`,
-    `Project type: ${formState.projectType}`,
-    `Budget: ${formState.budget}`,
+    `Тип проекта: ${formState.projectType}`,
+    `Бюджет: ${formState.budget}`,
     "",
-    "Project description:",
+    "Описание проекта:",
     formState.description,
   ].join("\n");
 }
 
 function buildMailtoUrl(formState: typeof initialFormState) {
-  const subject = `Daralla project request: ${formState.projectType}`;
+  const subject = `Запрос на проект Daralla: ${formState.projectType}`;
   const body = buildRequestSummary(formState);
 
   return `mailto:${studioEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -76,7 +76,7 @@ export function ContactForm() {
         setFeedback({
           tone: "success",
           message:
-            "Your email app should open with a prepared project brief. The request text was also copied to your clipboard when supported.",
+            "Почтовое приложение должно открыться с уже подготовленным брифом. Текст запроса также был скопирован в буфер обмена, если устройство это поддерживает.",
         });
       } catch (error) {
         setFeedback({
@@ -84,7 +84,7 @@ export function ContactForm() {
           message:
             error instanceof Error
               ? error.message
-              : "Unable to prepare the request email on this device.",
+              : "Не удалось подготовить письмо на этом устройстве.",
         });
       }
     });
@@ -98,14 +98,14 @@ export function ContactForm() {
       <div className="grid gap-5 md:grid-cols-2">
         <label className="space-y-3">
           <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-            Name
+            Имя
           </span>
           <input
             type="text"
             name="clientName"
             value={formState.clientName}
             onChange={(event) => updateField("clientName", event.target.value)}
-            placeholder="Your name"
+            placeholder="Ваше имя"
             className="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
             required
           />
@@ -128,7 +128,7 @@ export function ContactForm() {
 
       <label className="space-y-3">
         <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-          Project Type
+          Тип проекта
         </span>
         <select
           name="projectType"
@@ -146,14 +146,14 @@ export function ContactForm() {
 
       <label className="space-y-3">
         <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-          Project Description
+          Описание проекта
         </span>
         <textarea
           name="description"
           rows={7}
           value={formState.description}
           onChange={(event) => updateField("description", event.target.value)}
-          placeholder="Outline the product, audience, goals, and desired timeline."
+          placeholder="Опишите продукт, аудиторию, цели и желаемые сроки."
           className="w-full rounded-[1.5rem] border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
           required
         />
@@ -161,14 +161,14 @@ export function ContactForm() {
 
       <label className="space-y-3">
         <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-          Budget
+          Бюджет
         </span>
         <input
           type="text"
           name="budget"
           value={formState.budget}
           onChange={(event) => updateField("budget", event.target.value)}
-          placeholder="e.g. $15k - $30k"
+          placeholder="Например: $15k - $30k"
           className="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
           required
         />
@@ -191,7 +191,7 @@ export function ContactForm() {
         disabled={isPending}
         className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-medium uppercase tracking-[0.18em] text-slate-950 transition-transform duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {isPending ? "Preparing..." : "Open Email Request"}
+        {isPending ? "Подготовка..." : "Открыть письмо с запросом"}
       </button>
     </form>
   );

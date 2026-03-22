@@ -3,17 +3,17 @@ import { SectionHeading } from "@/components/section-heading";
 import { services } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Services | Daralla",
-  description: "Daralla studio services across web, 3D, motion, and games.",
+  title: "Услуги | Daralla",
+  description: "Услуги Daralla: веб-разработка, 3D-визуализация, motion design и game development.",
 };
 
 export default function ServicesPage() {
   return (
     <div className="space-y-16 pb-24">
       <SectionHeading
-        eyebrow="Services"
-        title="Creative systems for digital-first brands"
-        description="Four core categories cover launch-ready websites, immersive visuals, motion-led storytelling, and playable experiences."
+        eyebrow="Услуги"
+        title="Креативные и технологические решения для digital-first брендов"
+        description="Четыре ключевых направления закрывают сайты для запуска, визуальные миры, motion-подачу и интерактивные форматы."
       />
 
       <div className="grid gap-6 lg:grid-cols-2">

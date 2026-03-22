@@ -3,52 +3,52 @@ import { ContactForm } from "@/components/contact-form";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
-  title: "Contact | Daralla",
-  description: "Contact Daralla to request a new creative technology project.",
+  title: "Контакты | Daralla",
+  description: "Связаться с Daralla и отправить запрос на новый проект.",
 };
 
 export default function ContactPage() {
   return (
     <div className="space-y-16 pb-24">
       <SectionHeading
-        eyebrow="Contact"
-        title="Tell us what you want to build"
-        description="Share the scope, goals, and budget. Daralla will prepare a structured request email so you can send the brief instantly from desktop or phone."
+        eyebrow="Контакты"
+        title="Расскажите, что вы хотите запустить"
+        description="Опишите задачу, цель и бюджет. Daralla подготовит структурированный запрос, который можно сразу отправить с компьютера или телефона."
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <aside className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
           <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/75">
-            Studio Contact
+            Контакт со студией
           </p>
           <div className="mt-6 space-y-6">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                Email
+                Почта
               </p>
               <p className="mt-2 text-lg text-white">hello@daralla.studio</p>
             </div>
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                How It Works
+                Как это работает
               </p>
               <p className="mt-2 text-lg text-white">
-                A ready-to-send email draft opens instantly
+                Сразу откроется готовое письмо с вашим брифом
               </p>
             </div>
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                Preferred Projects
+                Предпочтительные проекты
               </p>
               <p className="mt-2 text-lg text-white">
-                Product sites, campaign worlds, immersive showcases
+                Сайты продуктов, digital-кампании, визуальные и immersive-решения
               </p>
             </div>
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                Response Time
+                Время ответа
               </p>
-              <p className="mt-2 text-lg text-white">Usually within 48 hours</p>
+              <p className="mt-2 text-lg text-white">Обычно в течение 48 часов</p>
             </div>
           </div>
         </aside>

@@ -17,7 +17,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Daralla",
   description:
-    "Daralla is a futuristic digital studio crafting immersive websites and visual experiences.",
+    "Daralla — креативная digital-студия, которая создает сайты, визуальные системы и технологичные презентации для современных брендов.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body
         className={`${spaceGrotesk.variable} ${syne.variable} bg-slate-950 antialiased`}
       >

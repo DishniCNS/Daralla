@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const footerLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/services", label: "Услуги" },
+  { href: "/portfolio", label: "Портфолио" },
+  { href: "/about", label: "О студии" },
+  { href: "/contact", label: "Контакты" },
 ];
 
 export function SiteFooter() {
@@ -16,8 +16,9 @@ export function SiteFooter() {
             DARALLA
           </p>
           <p className="mt-3 max-w-md text-sm leading-7 text-slate-400">
-            Creative technology studio for brands that want a sharper digital
-            presence and launch-ready visual identity.
+            Креативная технологическая студия для брендов, которым нужен
+            сильный digital-образ, понятная подача и визуальная система
+            уровня запуска продукта.
           </p>
           <a
             href="mailto:hello@daralla.studio"

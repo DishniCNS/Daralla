@@ -24,7 +24,7 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Project Not Found | Daralla",
+      title: "Проект не найден | Daralla",
     };
   }
 
@@ -50,7 +50,7 @@ export default async function PortfolioProjectPage({
         href="/portfolio"
         className="inline-flex text-sm uppercase tracking-[0.22em] text-cyan-200 transition-colors hover:text-white"
       >
-        Back to portfolio
+        Назад в портфолио
       </Link>
 
       <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-10">
@@ -70,13 +70,13 @@ export default async function PortfolioProjectPage({
 
           <div className="rounded-[1.75rem] border border-white/10 bg-slate-950/70 p-6">
             <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
-              Client Scenario
+              Задача клиента
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-300">
               {project.clientScenario}
             </p>
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-slate-500">
-              Visual Concept
+              Визуальная концепция
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-300">
               {project.visualConcept}
@@ -88,7 +88,7 @@ export default async function PortfolioProjectPage({
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <article className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
           <h2 className="font-display text-3xl tracking-[-0.04em] text-white">
-            Project Description
+            Описание проекта
           </h2>
           <p className="mt-4 text-sm leading-8 text-slate-400">
             {project.description}
@@ -97,7 +97,7 @@ export default async function PortfolioProjectPage({
 
         <article className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
           <h2 className="font-display text-3xl tracking-[-0.04em] text-white">
-            Technologies Used
+            Использованные технологии
           </h2>
           <div className="mt-5 flex flex-wrap gap-3">
             {project.technologies.map((technology) => (
@@ -115,10 +115,10 @@ export default async function PortfolioProjectPage({
       <section className="space-y-6">
         <div>
           <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/75">
-            Gallery
+            Галерея
           </p>
           <h2 className="mt-3 font-display text-4xl tracking-[-0.04em] text-white">
-            Project imagery
+            Визуалы проекта
           </h2>
         </div>
 

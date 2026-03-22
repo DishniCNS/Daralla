@@ -1,46 +1,46 @@
 export const services = [
   {
     tag: "01",
-    title: "Web Development",
+    title: "Веб-разработка",
     description:
-      "Custom Next.js websites and digital platforms with fast performance, flexible content structures, and launch-focused user journeys.",
+      "Кастомные сайты и digital-платформы на Next.js с высокой скоростью, гибкой структурой контента и логикой, заточенной под запуск и рост.",
     points: [
-      "Brand websites and landing pages",
-      "Headless marketing experiences",
-      "Performance and responsive implementation",
+      "Сайты брендов и лендинги",
+      "Headless-решения для маркетинга",
+      "Быстрая и адаптивная реализация",
     ],
   },
   {
     tag: "02",
-    title: "3D Visualization",
+    title: "3D-визуализация",
     description:
-      "Spatial storytelling, product renders, and atmospheric visuals that make complex ideas feel tactile and premium.",
+      "Пространственный сторителлинг, продуктовые рендеры и атмосферные визуалы, которые делают сложные идеи понятными и премиальными.",
     points: [
-      "Product visualization",
-      "Architectural and concept scenes",
-      "3D assets for campaigns and launch films",
+      "Визуализация продуктов",
+      "Архитектурные и концепт-сцены",
+      "3D-ассеты для кампаний и launch-видео",
     ],
   },
   {
     tag: "03",
-    title: "Motion Design",
+    title: "Motion design",
     description:
-      "Motion systems and branded animation that sharpen product messaging and create a more cinematic digital rhythm.",
+      "Motion-системы и фирменная анимация, которые делают подачу продукта выразительнее и добавляют цифровому опыту кинематографичность.",
     points: [
-      "Launch trailers and logo animation",
-      "UI motion direction",
-      "Social and campaign content systems",
+      "Трейлеры для запуска и анимация логотипа",
+      "Motion-направление для интерфейсов",
+      "Системы контента для соцсетей и кампаний",
     ],
   },
   {
     tag: "04",
-    title: "Game Development",
+    title: "Разработка игр",
     description:
-      "Interactive environments, lightweight web games, and real-time experiences designed for attention and engagement.",
+      "Интерактивные среды, веб-игры и real-time experiences, созданные для вовлечения и сильной подачи идеи.",
     points: [
-      "Web-based interactive experiences",
-      "Playable campaign prototypes",
-      "Concept development for immersive worlds",
+      "Интерактивные веб-опыты",
+      "Играбельные прототипы для кампаний",
+      "Разработка концептов для immersive-миров",
     ],
   },
 ] as const;
@@ -49,156 +49,156 @@ export const portfolioItems = [
   {
     slug: "nova-grid",
     name: "Nova Grid",
-    category: "Web Development",
+    category: "Веб-разработка",
     year: "2025",
     summary:
-      "A product launch website for an AI infrastructure company, built around deep-scroll storytelling and animated data reveals.",
+      "Сайт для запуска продукта AI-инфраструктурной компании с глубоким scroll-сторителлингом и анимированной подачей данных.",
     description:
-      "Nova Grid translates a dense technical product into a cinematic browsing experience. The site combines modular editorial pacing, animated metrics, and deep-scroll transitions to make infrastructure feel tangible and premium.",
+      "Nova Grid превращает сложный технический продукт в кинематографичный пользовательский опыт. Сайт сочетает модульную editorial-структуру, анимированные метрики и глубокие scroll-переходы, чтобы инфраструктура ощущалась осязаемой и премиальной.",
     clientScenario:
-      "An AI infrastructure startup needed a launch-ready website before a major funding announcement and product demo cycle.",
+      "Стартап в сфере AI-инфраструктуры нуждался в launch-ready сайте перед крупным анонсом инвестиций и серией продуктовых демонстраций.",
     visualConcept:
-      "An atmospheric interface system built from data grids, luminous accents, and motion-led sections that feel like walking through a command center.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Motion Design"],
-    deliverables: ["Strategy", "Design", "Next.js"],
+      "Атмосферная интерфейсная система на основе data grid, светящихся акцентов и motion-секций, создающих ощущение цифрового командного центра.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Motion design"],
+    deliverables: ["Стратегия", "Дизайн", "Next.js"],
     images: [
       {
         src: "/portfolio/nova-grid-01.svg",
-        alt: "Nova Grid interface overview",
+        alt: "Общий вид интерфейса Nova Grid",
       },
       {
         src: "/portfolio/nova-grid-02.svg",
-        alt: "Nova Grid editorial layout composition",
+        alt: "Композиция editorial-страницы Nova Grid",
       },
     ],
   },
   {
     slug: "vanta-habitat",
     name: "Vanta Habitat",
-    category: "3D Visualization",
+    category: "3D-визуализация",
     year: "2025",
     summary:
-      "High-contrast spatial renders for a future-living concept brand, combining technical realism with editorial composition.",
+      "Контрастные пространственные рендеры для бренда жилой концепции будущего, сочетающие технический реализм и editorial-композицию.",
     description:
-      "Vanta Habitat is a world-building visualization series for a speculative living environment. The work balances realistic materials with cinematic framing to create a premium future-lifestyle narrative.",
+      "Vanta Habitat — серия world-building визуализаций для концепции жилой среды будущего. Проект сочетает реалистичные материалы и кинематографичную композицию, формируя премиальный образ будущего лайфстайла.",
     clientScenario:
-      "A property concept team needed investor-grade visualizations before physical prototyping and planning approvals.",
+      "Команде девелоперской концепции были нужны investor-grade визуализации до этапа физического прототипирования и согласований.",
     visualConcept:
-      "Shadowy architectural silhouettes, reflective surfaces, and light wells that make the environment feel both luxurious and mysterious.",
-    technologies: ["Blender", "Octane Render", "Look Development", "Compositing"],
-    deliverables: ["3D", "Lookdev", "Campaign"],
+      "Темные архитектурные силуэты, отражающие поверхности и световые колодцы, создающие одновременно ощущение роскоши и загадочности.",
+    technologies: ["Blender", "Octane Render", "Look development", "Compositing"],
+    deliverables: ["3D", "Lookdev", "Кампания"],
     images: [
       {
         src: "/portfolio/vanta-habitat-01.svg",
-        alt: "Vanta Habitat architectural hero render",
+        alt: "Главный архитектурный рендер Vanta Habitat",
       },
       {
         src: "/portfolio/vanta-habitat-02.svg",
-        alt: "Vanta Habitat spatial composition board",
+        alt: "Доска пространственной композиции Vanta Habitat",
       },
     ],
   },
   {
     slug: "pulse-zero",
     name: "Pulse Zero",
-    category: "Motion Design",
+    category: "Motion design",
     year: "2024",
     summary:
-      "An identity and motion toolkit for a fintech launch, including teaser loops, interface transitions, and keynote visuals.",
+      "Система фирменной айдентики и motion-подачи для запуска fintech-продукта: teaser-loop, интерфейсные переходы и ключевые визуалы.",
     description:
-      "Pulse Zero establishes a motion language for launch videos, keynote visuals, and social edits. The system keeps every moving asset visually related while still feeling sharp and campaign-ready.",
+      "Pulse Zero задает motion-язык для launch-видео, keynote-визуалов и social-роликов. Система делает все движущиеся материалы визуально связанными и готовыми к кампании.",
     clientScenario:
-      "A fintech startup was preparing launch-day assets across keynote, paid ads, onboarding, and social content.",
+      "Fintech-стартап готовил набор материалов к запуску: keynote, платная реклама, onboarding и контент для соцсетей.",
     visualConcept:
-      "Signal-wave curves, kinetic bars, and restrained neon light that suggest speed, confidence, and financial precision.",
-    technologies: ["After Effects", "Cinema 4D", "Figma", "Brand Motion"],
-    deliverables: ["Motion", "Identity", "Launch"],
+      "Линии-сигналы, кинетические полосы и сдержанный неоновый свет, которые передают скорость, уверенность и финансовую точность.",
+    technologies: ["After Effects", "Cinema 4D", "Figma", "Brand motion"],
+    deliverables: ["Motion", "Айдентика", "Запуск"],
     images: [
       {
         src: "/portfolio/pulse-zero-01.svg",
-        alt: "Pulse Zero motion identity cover frame",
+        alt: "Ключевой кадр motion-айдентики Pulse Zero",
       },
       {
         src: "/portfolio/pulse-zero-02.svg",
-        alt: "Pulse Zero campaign animation rhythm study",
+        alt: "Ритмика анимации кампании Pulse Zero",
       },
     ],
   },
   {
     slug: "echo-sector",
     name: "Echo Sector",
-    category: "Game Development",
+    category: "Разработка игр",
     year: "2024",
     summary:
-      "A browser-based sci-fi micro experience that translated a campaign universe into a playable teaser world.",
+      "Браузерный sci-fi micro experience, который превратил вселенную кампании в играбельный teaser-мир.",
     description:
-      "Echo Sector is a playable teaser world designed to extend a campaign beyond static content. It compresses exploration, world-building, and interaction into a web-first launch moment.",
+      "Echo Sector — играбельный тизерный мир, созданный для того, чтобы расширить кампанию за пределы статического контента. Проект объединяет исследование, world-building и интерактив в web-first запуске.",
     clientScenario:
-      "A media brand wanted an interactive reveal asset that could bridge hype between announcement and full release.",
+      "Медиа-бренду нужен был интерактивный reveal-ассет, который удержит интерес между анонсом и полноценным релизом.",
     visualConcept:
-      "Derelict stations, HUD overlays, and atmospheric scanning effects built into a focused micro-experience.",
-    technologies: ["Three.js", "WebGL", "Gameplay Prototyping", "UI Design"],
-    deliverables: ["Gameplay", "UI", "WebGL"],
+      "Заброшенные станции, HUD-слои и атмосферные сканирующие эффекты, собранные в компактный и выразительный micro-experience.",
+    technologies: ["Three.js", "WebGL", "Gameplay prototyping", "UI design"],
+    deliverables: ["Геймплей", "UI", "WebGL"],
     images: [
       {
         src: "/portfolio/nova-grid-02.svg",
-        alt: "Echo Sector interface exploration frame",
+        alt: "Кадр исследования интерфейса Echo Sector",
       },
       {
         src: "/portfolio/pulse-zero-01.svg",
-        alt: "Echo Sector teaser world mood image",
+        alt: "Атмосферный тизерный кадр мира Echo Sector",
       },
     ],
   },
   {
     slug: "astra-frame",
     name: "Astra Frame",
-    category: "Web Development",
+    category: "Веб-разработка",
     year: "2024",
     summary:
-      "A modular portfolio system for a creative hardware studio, with immersive transitions and editorial content blocks.",
+      "Модульная портфолио-система для студии hardware-дизайна с immersive-переходами и editorial-блоками контента.",
     description:
-      "Astra Frame gives a product-led studio a modular way to publish launches, stories, and visual process. It was built to feel immersive without sacrificing editorial clarity.",
+      "Astra Frame дает продуктовой студии модульный способ публиковать запуски, истории и визуальный процесс. Система задумывалась как immersive-опыт без потери editorial-ясности.",
     clientScenario:
-      "A hardware studio needed a flexible site that could support launches, case studies, and team storytelling with one system.",
+      "Hardware-студии был нужен гибкий сайт, который одной системой поддерживает запуски, кейсы и командный storytelling.",
     visualConcept:
-      "Large-format typography, cinematic spacing, and modular content frames that create a gallery-like sense of navigation.",
-    technologies: ["Next.js", "Headless CMS", "Tailwind CSS", "Responsive Systems"],
+      "Крупная типографика, кинематографичная дистанция между блоками и модульные рамки контента, создающие ощущение галерейной навигации.",
+    technologies: ["Next.js", "Headless CMS", "Tailwind CSS", "Responsive systems"],
     deliverables: ["CMS", "UX", "Frontend"],
     images: [
       {
         src: "/portfolio/nova-grid-01.svg",
-        alt: "Astra Frame homepage composition",
+        alt: "Композиция главной страницы Astra Frame",
       },
       {
         src: "/portfolio/vanta-habitat-02.svg",
-        alt: "Astra Frame content system layouts",
+        alt: "Макеты контентной системы Astra Frame",
       },
     ],
   },
   {
     slug: "luma-core",
     name: "Luma Core",
-    category: "3D Visualization",
+    category: "3D-визуализация",
     year: "2023",
     summary:
-      "Product hero visuals and cutaway sequences built for a new consumer device reveal campaign.",
+      "Hero-визуалы продукта и cutaway-сцены, созданные для кампании раскрытия нового потребительского устройства.",
     description:
-      "Luma Core turns a technical product into a premium campaign language with hero stills, exploded views, and light-driven close-up renders built for launch marketing.",
+      "Luma Core превращает технический продукт в премиальный визуальный язык кампании через hero-кадры, exploded view и световые close-up рендеры для launch-маркетинга.",
     clientScenario:
-      "A consumer device team needed visual assets before manufacturing photography was possible.",
+      "Команде потребительского устройства были нужны сильные визуалы до того, как стала возможна реальная предметная съемка.",
     visualConcept:
-      "Precision-lit product studies, floating cutaway components, and clean high-contrast backdrops that emphasize engineering detail.",
-    technologies: ["Cinema 4D", "Redshift", "Photoshop", "3D Compositing"],
-    deliverables: ["CGI", "Rendering", "Compositing"],
+      "Точно выставленный свет, парящие cutaway-компоненты и чистые контрастные фоны, подчеркивающие инженерную детализацию.",
+    technologies: ["Cinema 4D", "Redshift", "Photoshop", "3D compositing"],
+    deliverables: ["CGI", "Рендеринг", "Композитинг"],
     images: [
       {
         src: "/portfolio/vanta-habitat-01.svg",
-        alt: "Luma Core hero render composition",
+        alt: "Композиция главного рендера Luma Core",
       },
       {
         src: "/portfolio/pulse-zero-02.svg",
-        alt: "Luma Core cutaway visual system",
+        alt: "Cutaway-визуальная система Luma Core",
       },
     ],
   },

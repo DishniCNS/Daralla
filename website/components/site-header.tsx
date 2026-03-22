@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Главная" },
+  { href: "/services", label: "Услуги" },
+  { href: "/portfolio", label: "Портфолио" },
+  { href: "/about", label: "О студии" },
+  { href: "/contact", label: "Контакты" },
 ];
 
 export function SiteHeader() {
@@ -51,7 +51,7 @@ export function SiteHeader() {
           href="/contact"
           className="hidden rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm uppercase tracking-[0.18em] text-cyan-100 transition-colors hover:border-cyan-200/60 hover:text-white md:inline-flex"
         >
-          Request
+          Запрос
         </Link>
       </div>
       <nav className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-6 pb-4 md:hidden">

@@ -13,30 +13,30 @@ export default function Home() {
         <div className="relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div className="max-w-3xl animate-fade-in-up">
             <p className="mb-5 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-cyan-200">
-              Digital Studio / Since 2019
+              Digital Studio / С 2019 года
             </p>
             <h1 className="max-w-4xl font-display text-5xl leading-none tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-              Daralla designs and builds the full digital layer around modern
-              brands, products, and launch ideas.
+              Daralla создает полный цифровой слой вокруг современных брендов,
+              продуктов и запусков.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              From conversion-ready websites and portfolio systems to 3D
-              visualization, motion graphics, and interactive concepts, we turn
-              ambitious ideas into polished digital experiences that feel
-              premium from the first click.
+              От продающих сайтов и портфолио-систем до 3D-визуализации,
+              motion graphics и интерактивных концептов. Мы превращаем сильные
+              идеи в визуально точные цифровые продукты, которые сразу создают
+              ощущение уровня и доверия.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium tracking-[0.18em] text-slate-950 transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Start A Client Request
+                Обсудить проект
               </Link>
               <Link
                 href="/portfolio"
                 className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium tracking-[0.18em] text-white transition-colors duration-300 hover:border-cyan-300/40 hover:bg-white/[0.06]"
               >
-                View Portfolio
+                Смотреть портфолио
               </Link>
             </div>
           </div>
@@ -44,21 +44,25 @@ export default function Home() {
           <div className="grid gap-4 animate-fade-in-up [animation-delay:160ms] md:grid-cols-2 lg:grid-cols-1">
             <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-6">
               <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
-                Focus
+                Фокус
               </p>
               <p className="mt-3 text-2xl font-display tracking-[-0.03em] text-white">
-                One studio for web, visual systems, launch content, and
-                immersive product storytelling.
+                Одна студия для сайтов, визуальных систем, launch-контента и
+                выразительной digital-подачи продукта.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 rounded-[1.5rem] border border-white/10 bg-white/[0.02] p-6">
               <div>
                 <p className="text-3xl font-display text-white">32</p>
-                <p className="mt-2 text-sm text-slate-400">Launches shipped</p>
+                <p className="mt-2 text-sm text-slate-400">
+                  Реализованных запусков
+                </p>
               </div>
               <div>
                 <p className="text-3xl font-display text-white">11</p>
-                <p className="mt-2 text-sm text-slate-400">Countries served</p>
+                <p className="mt-2 text-sm text-slate-400">
+                  Стран в работе
+                </p>
               </div>
             </div>
           </div>
@@ -67,9 +71,9 @@ export default function Home() {
 
       <section className="space-y-8">
         <SectionHeading
-          eyebrow="Capabilities"
-          title="Services preview"
-          description="Selected disciplines we combine into a single studio workflow."
+          eyebrow="Возможности"
+          title="Ключевые направления"
+          description="Основные дисциплины, которые Daralla объединяет в единую студийную систему."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {featuredServices.map((service, index) => (
@@ -94,15 +98,15 @@ export default function Home() {
           href="/services"
           className="inline-flex text-sm uppercase tracking-[0.22em] text-cyan-200 transition-colors hover:text-white"
         >
-          Explore all services
+          Все услуги
         </Link>
       </section>
 
       <section className="space-y-8">
         <SectionHeading
-          eyebrow="Selected Work"
-          title="Portfolio preview"
-          description="A snapshot of brand worlds, product showcases, and immersive builds."
+          eyebrow="Избранные проекты"
+          title="Портфолио"
+          description="Подборка проектов Daralla: запусков, визуальных систем, digital-презентаций и интерактивных концептов."
         />
         <div className="grid gap-5 md:grid-cols-2">
           {featuredProjects.map((project) => (
@@ -133,7 +137,7 @@ export default function Home() {
           href="/portfolio"
           className="inline-flex text-sm uppercase tracking-[0.22em] text-cyan-200 transition-colors hover:text-white"
         >
-          Browse the full portfolio
+          Все проекты
         </Link>
       </section>
     </div>
