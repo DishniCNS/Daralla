@@ -1,13 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
   <defs>
-    <linearGradient id="vh" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#050816" />
+    <linearGradient id="vhbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712" />
       <stop offset="100%" stop-color="#1f2937" />
     </linearGradient>
+    <linearGradient id="tower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#172554" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
   </defs>
-  <rect width="1400" height="1000" fill="url(#vh)" />
-  <circle cx="1120" cy="160" r="150" fill="#34d399" fill-opacity="0.18" />
-  <polygon points="180,760 470,280 790,760" fill="#111827" stroke="#67e8f9" stroke-opacity="0.18" />
-  <polygon points="520,760 810,220 1160,760" fill="#0f172a" stroke="#34d399" stroke-opacity="0.18" />
-  <text x="190" y="190" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="68" font-weight="700">Vanta Habitat</text>
+  <rect width="1600" height="1000" fill="url(#vhbg)" />
+  <circle cx="1180" cy="170" r="180" fill="#34d399" fill-opacity=".18" />
+  <ellipse cx="820" cy="820" rx="560" ry="120" fill="#67e8f9" fill-opacity=".08" />
+  <path d="M250 760 L470 350 L690 760 Z" fill="#0f172a" stroke="#67e8f9" stroke-opacity=".22" />
+  <path d="M540 780 L790 250 L1080 780 Z" fill="url(#tower)" stroke="#86efac" stroke-opacity=".18" />
+  <path d="M880 760 L1120 320 L1360 760 Z" fill="#111827" stroke="#67e8f9" stroke-opacity=".18" />
+  <g stroke="#94a3b8" stroke-opacity=".24">
+    <path d="M320 610 H620M300 650 H640M282 690 H658" />
+    <path d="M636 540 H950M616 590 H970M596 640 H990" />
+    <path d="M980 620 H1260M964 660 H1276M948 700 H1292" />
+  </g>
+  <rect x="120" y="96" width="360" height="120" rx="28" fill="#07111e" stroke="#1e293b" />
+  <rect x="160" y="134" width="180" height="20" rx="10" fill="#f8fafc" />
+  <rect x="160" y="170" width="250" height="14" rx="7" fill="#94a3b8" />
 </svg>

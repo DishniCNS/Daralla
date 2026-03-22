@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#05070f" />
+  <circle cx="1180" cy="220" r="180" fill="#67e8f9" fill-opacity=".12" />
+  <ellipse cx="820" cy="800" rx="420" ry="100" fill="#67e8f9" fill-opacity=".08" />
+  <g transform="translate(420 170)">
+    <rect x="180" y="120" width="360" height="420" rx="56" fill="#dbe4ef" />
+    <rect x="206" y="148" width="308" height="364" rx="42" fill="#f8fafc" />
+    <circle cx="360" cy="202" r="18" fill="#94a3b8" />
+    <rect x="278" y="556" width="164" height="18" rx="9" fill="#67e8f9" fill-opacity=".4" />
+    <path d="M60 470 L240 310" stroke="#67e8f9" stroke-opacity=".26" />
+    <path d="M720 470 L540 310" stroke="#67e8f9" stroke-opacity=".26" />
+    <rect x="86" y="268" width="120" height="120" rx="28" fill="#0f172a" stroke="#334155" />
+    <rect x="594" y="268" width="120" height="120" rx="28" fill="#0f172a" stroke="#334155" />
+    <rect x="96" y="278" width="100" height="100" rx="22" fill="#111827" />
+    <rect x="604" y="278" width="100" height="100" rx="22" fill="#111827" />
+  </g>
+</svg>

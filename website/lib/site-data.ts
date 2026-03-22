@@ -141,11 +141,11 @@ export const portfolioItems = [
     deliverables: ["Геймплей", "UI", "WebGL"],
     images: [
       {
-        src: "/portfolio/nova-grid-02.svg",
+        src: "/portfolio/echo-sector-01.svg",
         alt: "Кадр исследования интерфейса Echo Sector",
       },
       {
-        src: "/portfolio/pulse-zero-01.svg",
+        src: "/portfolio/echo-sector-02.svg",
         alt: "Атмосферный тизерный кадр мира Echo Sector",
       },
     ],
@@ -167,11 +167,11 @@ export const portfolioItems = [
     deliverables: ["CMS", "UX", "Frontend"],
     images: [
       {
-        src: "/portfolio/nova-grid-01.svg",
+        src: "/portfolio/astra-frame-01.svg",
         alt: "Композиция главной страницы Astra Frame",
       },
       {
-        src: "/portfolio/vanta-habitat-02.svg",
+        src: "/portfolio/astra-frame-02.svg",
         alt: "Макеты контентной системы Astra Frame",
       },
     ],
@@ -193,11 +193,11 @@ export const portfolioItems = [
     deliverables: ["CGI", "Рендеринг", "Композитинг"],
     images: [
       {
-        src: "/portfolio/vanta-habitat-01.svg",
+        src: "/portfolio/luma-core-01.svg",
         alt: "Композиция главного рендера Luma Core",
       },
       {
-        src: "/portfolio/pulse-zero-02.svg",
+        src: "/portfolio/luma-core-02.svg",
         alt: "Cutaway-визуальная система Luma Core",
       },
     ],

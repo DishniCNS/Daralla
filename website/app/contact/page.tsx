@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -17,10 +18,20 @@ export default function ContactPage() {
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-        <aside className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
+        <aside className="glass-panel studio-grid rounded-[1.75rem] p-8">
           <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/75">
             Контакт со студией
           </p>
+          <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-[1.35rem] border border-white/10 bg-slate-950/70">
+            <Image
+              src="/portfolio/luma-core-01.svg"
+              alt="Визуальный стиль Daralla"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 30vw"
+              className="object-cover"
+            />
+          </div>
           <div className="mt-6 space-y-6">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
@@ -50,6 +61,18 @@ export default function ContactPage() {
               </p>
               <p className="mt-2 text-lg text-white">Обычно в течение 48 часов</p>
             </div>
+          </div>
+
+          <div className="mt-8 rounded-[1.35rem] border border-white/10 bg-slate-950/60 p-5">
+            <p className="text-xs uppercase tracking-[0.24em] text-cyan-200/70">
+              Что лучше указать
+            </p>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-300">
+              <li>Цель проекта и тип бизнеса</li>
+              <li>Что именно нужно сделать сейчас</li>
+              <li>Какой результат должен получить клиент</li>
+              <li>Ориентир по срокам и бюджету</li>
+            </ul>
           </div>
         </aside>
 

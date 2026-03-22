@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#040b14" />
+  <g transform="translate(110 110)">
+    <rect width="1380" height="780" rx="40" fill="#08111f" stroke="#1e293b" />
+    <rect x="44" y="44" width="920" height="692" rx="28" fill="#050b14" stroke="#334155" />
+    <rect x="1002" y="44" width="334" height="320" rx="28" fill="#0b1325" stroke="#334155" />
+    <rect x="1002" y="404" width="334" height="332" rx="28" fill="#0b1325" stroke="#334155" />
+    <path d="M94 510 L300 330 L520 550 L760 280 L914 390" stroke="#67e8f9" stroke-width="6" stroke-linecap="round" />
+    <circle cx="300" cy="330" r="70" fill="#0f172a" stroke="#67e8f9" stroke-opacity=".22" />
+    <circle cx="760" cy="280" r="92" fill="#0f172a" stroke="#67e8f9" stroke-opacity=".18" />
+    <rect x="1048" y="92" width="126" height="14" rx="7" fill="#e2e8f0" />
+    <rect x="1048" y="126" width="180" height="12" rx="6" fill="#94a3b8" />
+    <rect x="1048" y="160" width="140" height="12" rx="6" fill="#94a3b8" fill-opacity=".72" />
+    <circle cx="1168" cy="540" r="90" fill="#0f172a" stroke="#67e8f9" stroke-opacity=".22" />
+    <path d="M1118 540 H1218 M1168 490 V590" stroke="#67e8f9" stroke-opacity=".28" />
+  </g>
+</svg>

@@ -1,7 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
-  <rect width="1400" height="1000" fill="#120712" />
-  <path d="M0 620 C250 360 430 780 700 520 S1120 260 1400 480" stroke="#67e8f9" stroke-width="16" fill="none" stroke-linecap="round" />
-  <path d="M0 690 C250 430 430 850 700 590 S1120 330 1400 550" stroke="#c084fc" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.8" />
-  <text x="130" y="230" fill="#f8fafc" font-family="Arial, sans-serif" font-size="72" font-weight="700">Pulse Zero</text>
-  <text x="130" y="295" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="28">Motion toolkit for a fintech launch.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#0d0713" />
+  <circle cx="290" cy="170" r="180" fill="#a855f7" fill-opacity=".14" />
+  <circle cx="1290" cy="760" r="220" fill="#22d3ee" fill-opacity=".1" />
+  <rect x="110" y="110" width="1380" height="780" rx="42" fill="#120b1c" stroke="#312043" />
+  <path d="M140 620 C300 360 480 800 720 520 S1160 260 1460 500" stroke="#67e8f9" stroke-width="18" stroke-linecap="round" />
+  <path d="M140 700 C320 430 480 880 740 600 S1180 340 1460 590" stroke="#c084fc" stroke-width="10" stroke-opacity=".9" stroke-linecap="round" />
+  <rect x="210" y="180" width="370" height="90" rx="28" fill="#1b1027" stroke="#3b2b4b" />
+  <rect x="252" y="216" width="180" height="20" rx="10" fill="#f8fafc" />
+  <rect x="252" y="250" width="220" height="12" rx="6" fill="#cbd5e1" fill-opacity=".72" />
+  <g transform="translate(880 180)">
+    <rect width="240" height="460" rx="34" fill="#0c1019" stroke="#475569" />
+    <rect x="18" y="18" width="204" height="424" rx="24" fill="#060913" />
+    <path d="M32 310 C90 240 130 340 182 286" stroke="#22d3ee" stroke-width="8" stroke-linecap="round" />
+    <rect x="40" y="60" width="120" height="14" rx="7" fill="#e2e8f0" />
+    <rect x="40" y="88" width="90" height="10" rx="5" fill="#94a3b8" />
+  </g>
+  <g transform="translate(1160 240)">
+    <rect width="170" height="340" rx="30" fill="#101521" stroke="#475569" />
+    <rect x="16" y="16" width="138" height="308" rx="22" fill="#060913" />
+    <path d="M30 208 C72 170 96 240 138 198" stroke="#c084fc" stroke-width="6" stroke-linecap="round" />
+  </g>
 </svg>

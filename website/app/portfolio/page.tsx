@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 import { portfolioItems } from "@/lib/site-data";
@@ -17,41 +18,52 @@ export default function PortfolioPage() {
         description="Подборка студийных работ: сайты для запуска, 3D-визуализация, motion-системы и интерактивные digital-форматы."
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-6 xl:grid-cols-12">
         {portfolioItems.map((project, index) => (
           <Link
             key={project.name}
             href={`/portfolio/${project.slug}`}
-            className="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] transition-transform duration-300 hover:-translate-y-1"
+            className={`glass-panel project-sheen group relative overflow-hidden rounded-[1.85rem] p-4 transition-transform duration-300 hover:-translate-y-1 ${
+              index % 3 === 0 ? "xl:col-span-7" : "xl:col-span-5"
+            }`}
             style={{ animationDelay: `${index * 80}ms` }}
           >
-            <div className="h-64 bg-[radial-gradient(circle_at_top_left,_rgba(29,205,159,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(76,105,255,0.22),_transparent_36%),linear-gradient(135deg,_rgba(15,23,42,1),_rgba(3,7,18,1))] p-5">
-              <div className="flex h-full flex-col justify-between rounded-[1.25rem] border border-white/10 bg-black/25 p-5">
-                <span className="text-xs uppercase tracking-[0.24em] text-slate-400">
-                  {project.category}
-                </span>
-                <div>
-                  <h2 className="font-display text-3xl tracking-[-0.04em] text-white">
-                    {project.name}
-                  </h2>
-                  <p className="mt-2 text-sm text-slate-400">{project.year}</p>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[1.4rem] border border-white/10 bg-slate-950/80">
+              <Image
+                src={project.images[0].src}
+                alt={project.images[0].alt}
+                fill
+                priority={index === 0}
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-cyan-100">
+                    {project.category}
+                  </span>
+                  <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-slate-200">
+                    {project.year}
+                  </span>
                 </div>
+                <h2 className="mt-4 font-display text-3xl tracking-[-0.04em] text-white sm:text-4xl">
+                  {project.name}
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-8 text-slate-300">
+                  {project.summary}
+                </p>
               </div>
             </div>
-            <div className="space-y-4 p-6">
-              <p className="text-sm leading-7 text-slate-400">
-                {project.summary}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {project.deliverables.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 px-3 py-2 text-xs uppercase tracking-[0.18em] text-slate-300"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+
+            <div className="mt-4 flex flex-wrap gap-2 px-2 pb-2">
+              {project.deliverables.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs uppercase tracking-[0.18em] text-slate-300"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </Link>
         ))}
