@@ -6,68 +6,85 @@ import { portfolioItems } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Портфолио | Daralla",
-  description: "Проекты и кейсы Daralla в вебе, 3D, motion и интерактивных форматах.",
+  description:
+    "Проекты Daralla в вебе, 3D, motion и интерактивных форматах.",
 };
 
 export default function PortfolioPage() {
   return (
-    <div className="space-y-16 pb-24">
+    <div className="space-y-20 pb-24">
       <SectionHeading
         eyebrow="Портфолио"
-        title="Проекты Daralla"
-        description="Подборка студийных работ: сайты для запуска, 3D-визуализация, motion-системы и интерактивные digital-форматы."
+        title="Кейсы, в которых видно не только результат, но и визуальное мышление студии"
+        description="Daralla показывает проекты как законченные системы: с кадрами, сценами, интерфейсами, атмосферой и понятной задачей бизнеса."
       />
 
-      <div className="grid gap-6 xl:grid-cols-12">
+      <section className="grid gap-6">
         {portfolioItems.map((project, index) => (
           <Link
-            key={project.name}
+            key={project.slug}
             href={`/portfolio/${project.slug}`}
-            className={`glass-panel project-sheen group relative overflow-hidden rounded-[1.85rem] p-4 transition-transform duration-300 hover:-translate-y-1 ${
-              index % 3 === 0 ? "xl:col-span-7" : "xl:col-span-5"
+            className={`glass-panel project-sheen group grid gap-5 p-4 md:p-5 ${
+              index % 2 === 0
+                ? "xl:grid-cols-[0.58fr_0.42fr]"
+                : "xl:grid-cols-[0.42fr_0.58fr]"
             }`}
-            style={{ animationDelay: `${index * 80}ms` }}
           >
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[1.4rem] border border-white/10 bg-slate-950/80">
+            <div
+              className={`relative aspect-[16/10] overflow-hidden border-2 border-indigo-300/55 bg-[#0b1029] ${
+                index % 2 === 1 ? "xl:order-2" : ""
+              }`}
+            >
               <Image
                 src={project.images[0].src}
                 alt={project.images[0].alt}
                 fill
-                priority={index === 0}
+                priority={index < 2}
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
+            </div>
+
+            <div
+              className={`flex flex-col justify-between gap-6 ${
+                index % 2 === 1 ? "xl:order-1" : ""
+              }`}
+            >
+              <div>
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-cyan-100">
+                  <span className="border border-indigo-300/45 bg-[#10163a] px-3 py-2 text-xs font-medium uppercase tracking-[0.22em] text-indigo-100">
                     {project.category}
                   </span>
-                  <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-slate-200">
+                  <span className="border border-indigo-300/30 bg-[#0c1231] px-3 py-2 text-xs font-medium uppercase tracking-[0.22em] text-slate-200">
                     {project.year}
                   </span>
                 </div>
-                <h2 className="mt-4 font-display text-3xl tracking-[-0.04em] text-white sm:text-4xl">
+                <h2 className="mt-5 font-display text-4xl font-semibold leading-none tracking-[-0.05em] text-white md:text-5xl">
                   {project.name}
                 </h2>
-                <p className="mt-3 max-w-2xl text-sm leading-8 text-slate-300">
+                <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
                   {project.summary}
                 </p>
               </div>
-            </div>
 
-            <div className="mt-4 flex flex-wrap gap-2 px-2 pb-2">
-              {project.deliverables.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs uppercase tracking-[0.18em] text-slate-300"
-                >
-                  {item}
-                </span>
-              ))}
+              <div className="grid gap-5 lg:grid-cols-[0.62fr_0.38fr]">
+                <div className="flex flex-wrap gap-2">
+                  {project.deliverables.map((item) => (
+                    <span
+                      key={item}
+                      className="border border-indigo-300/35 bg-[#0c1231] px-3 py-2 text-xs uppercase tracking-[0.18em] text-slate-100"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="border border-indigo-300/35 bg-[#0c1231] p-4 text-sm leading-7 text-slate-300">
+                  {project.visualConcept}
+                </div>
+              </div>
             </div>
           </Link>
         ))}
-      </div>
+      </section>
     </div>
   );
 }

@@ -48,10 +48,7 @@ export function ContactForm() {
   } | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  function updateField(
-    field: keyof typeof initialFormState,
-    value: string,
-  ) {
+  function updateField(field: keyof typeof initialFormState, value: string) {
     setFormState((current) => ({
       ...current,
       [field]: value,
@@ -91,13 +88,10 @@ export function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-5 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-8"
-    >
-      <div className="grid gap-5 md:grid-cols-2">
+    <form onSubmit={handleSubmit} className="glass-panel p-8 md:p-10">
+      <div className="grid gap-6 md:grid-cols-2">
         <label className="space-y-3">
-          <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-indigo-100">
             Имя
           </span>
           <input
@@ -106,12 +100,13 @@ export function ContactForm() {
             value={formState.clientName}
             onChange={(event) => updateField("clientName", event.target.value)}
             placeholder="Ваше имя"
-            className="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
+            className="w-full border-2 border-indigo-300/40 bg-[#0b1029] px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-indigo-200"
             required
           />
         </label>
+
         <label className="space-y-3">
-          <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-indigo-100">
             Email
           </span>
           <input
@@ -120,79 +115,88 @@ export function ContactForm() {
             value={formState.email}
             onChange={(event) => updateField("email", event.target.value)}
             placeholder="you@company.com"
-            className="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
+            className="w-full border-2 border-indigo-300/40 bg-[#0b1029] px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-indigo-200"
             required
           />
         </label>
       </div>
 
-      <label className="space-y-3">
-        <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-          Тип проекта
-        </span>
-        <select
-          name="projectType"
-          value={formState.projectType}
-          onChange={(event) => updateField("projectType", event.target.value)}
-          className="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors focus:border-cyan-300/40"
-        >
-          {projectTypes.map((projectType) => (
-            <option key={projectType} value={projectType}>
-              {projectType}
-            </option>
-          ))}
-        </select>
-      </label>
+      <div className="mt-6 grid gap-6">
+        <label className="space-y-3">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-indigo-100">
+            Тип проекта
+          </span>
+          <select
+            name="projectType"
+            value={formState.projectType}
+            onChange={(event) => updateField("projectType", event.target.value)}
+            className="w-full border-2 border-indigo-300/40 bg-[#0b1029] px-4 py-4 text-white outline-none focus:border-indigo-200"
+          >
+            {projectTypes.map((projectType) => (
+              <option key={projectType} value={projectType}>
+                {projectType}
+              </option>
+            ))}
+          </select>
+        </label>
 
-      <label className="space-y-3">
-        <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-          Описание проекта
-        </span>
-        <textarea
-          name="description"
-          rows={7}
-          value={formState.description}
-          onChange={(event) => updateField("description", event.target.value)}
-          placeholder="Опишите продукт, аудиторию, цели и желаемые сроки."
-          className="w-full rounded-[1.5rem] border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
-          required
-        />
-      </label>
+        <label className="space-y-3">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-indigo-100">
+            Описание проекта
+          </span>
+          <textarea
+            name="description"
+            rows={8}
+            value={formState.description}
+            onChange={(event) => updateField("description", event.target.value)}
+            placeholder="Опишите продукт, аудиторию, задачу, желаемый результат и сроки."
+            className="w-full border-2 border-indigo-300/40 bg-[#0b1029] px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-indigo-200"
+            required
+          />
+        </label>
 
-      <label className="space-y-3">
-        <span className="text-sm uppercase tracking-[0.18em] text-slate-400">
-          Бюджет
-        </span>
-        <input
-          type="text"
-          name="budget"
-          value={formState.budget}
-          onChange={(event) => updateField("budget", event.target.value)}
-          placeholder="Например: $15k - $30k"
-          className="w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/40"
-          required
-        />
-      </label>
+        <label className="space-y-3">
+          <span className="text-xs font-medium uppercase tracking-[0.24em] text-indigo-100">
+            Бюджет
+          </span>
+          <input
+            type="text"
+            name="budget"
+            value={formState.budget}
+            onChange={(event) => updateField("budget", event.target.value)}
+            placeholder="Например: $15k - $30k"
+            className="w-full border-2 border-indigo-300/40 bg-[#0b1029] px-4 py-4 text-white outline-none placeholder:text-slate-500 focus:border-indigo-200"
+            required
+          />
+        </label>
+      </div>
 
       {feedback ? (
         <div
-          className={`rounded-2xl border px-4 py-3 text-sm leading-7 ${
+          className={`mt-6 border-2 px-4 py-4 text-sm leading-7 ${
             feedback.tone === "success"
-              ? "border-emerald-300/20 bg-emerald-300/10 text-emerald-100"
-              : "border-rose-300/20 bg-rose-300/10 text-rose-100"
+              ? "border-emerald-300/40 bg-emerald-300/10 text-emerald-100"
+              : "border-rose-300/40 bg-rose-300/10 text-rose-100"
           }`}
         >
           {feedback.message}
         </div>
       ) : null}
 
-      <button
-        type="submit"
-        disabled={isPending}
-        className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-medium uppercase tracking-[0.18em] text-slate-950 transition-transform duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
-      >
-        {isPending ? "Подготовка..." : "Открыть письмо с запросом"}
-      </button>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <button
+          type="submit"
+          disabled={isPending}
+          className="border-2 border-indigo-200 bg-indigo-300 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[8px_8px_0_rgba(2,6,23,0.92)] transition-transform hover:-translate-x-[1px] hover:-translate-y-[1px] disabled:opacity-60"
+        >
+          {isPending ? "Подготовка..." : "Открыть письмо с запросом"}
+        </button>
+
+        <div className="border border-indigo-300/35 bg-[#0c1231] px-4 py-4 text-sm leading-6 text-slate-300">
+          Бриф сразу формируется в готовое письмо. Это удобно и на компьютере, и
+          на телефоне.
+        </div>
+      </div>
     </form>
   );
 }
