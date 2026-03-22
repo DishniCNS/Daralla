@@ -1,4 +1,4 @@
-name: Deploy Portfolio Pages
+name: Deploy Daralla Website
 
 on:
   push:
@@ -6,8 +6,7 @@ on:
       - main
       - master
     paths:
-      - "tools/portfolio-generator/**"
-      - "portfolio/**"
+      - "website/**"
       - ".github/workflows/portfolio-pages.yml"
   workflow_dispatch:
 
@@ -17,7 +16,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: portfolio-pages
+  group: website-pages
   cancel-in-progress: true
 
 jobs:
@@ -25,16 +24,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.11"
-      - name: Generate static portfolio
-        working-directory: tools/portfolio-generator
-        run: python generate_portfolio.py example_projects.json --output ../../_site
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - name: Install website dependencies
+        working-directory: website
+        run: npm ci
+      - name: Build static website
+        working-directory: website
+        run: npm run build
+      - name: Disable Jekyll processing
+        shell: pwsh
+        run: New-Item -ItemType File -Path website/out/.nojekyll -Force | Out-Null
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./website/out
 
   deploy:
     environment:

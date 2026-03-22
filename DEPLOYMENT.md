@@ -4,15 +4,15 @@ Daralla can be hosted with a mostly free setup, but each module has different co
 
 ## Recommended Free Setup
 
-- `portfolio/`: GitHub Pages
-- `website/`: Vercel Hobby
+- `website/`: GitHub Pages
+- `portfolio/`: optional static archive or secondary showcase export
 - `dashboard/`: Vercel Hobby or Cloudflare Pages
 - `backend/`: any Node-compatible host, or a serverless rewrite for Cloudflare Workers / Vercel Functions
 - MongoDB: MongoDB Atlas free tier
 
 ## Why Not Only GitHub Pages
 
-GitHub Pages serves static files only. It is a good fit for the generated `portfolio/` output, but it does not run:
+GitHub Pages serves static files only. It is a good fit for the public `website/`, but it does not run:
 
 - Express servers
 - MongoDB-backed APIs
@@ -20,11 +20,11 @@ GitHub Pages serves static files only. It is a good fit for the generated `portf
 
 ## GitHub Pages
 
-This repository includes a workflow that can publish the generated portfolio to GitHub Pages:
+This repository includes a workflow that can publish the public website to GitHub Pages:
 
 - workflow: `.github/workflows/portfolio-pages.yml`
-- source: `tools/portfolio-generator/example_projects.json`
-- output: generated static HTML artifact
+- source: `website/`
+- output: static Next.js export
 
 To enable it:
 
@@ -33,15 +33,13 @@ To enable it:
 3. Set `Source` to `GitHub Actions`.
 4. Push to `main` or run the workflow manually.
 
-## Website
+The published URL follows this pattern:
 
-Recommended host: Vercel Hobby.
+`https://<github-username>.github.io/Daralla/`
 
-Required environment variable:
+For this repository, the target URL is:
 
-```env
-NEXT_PUBLIC_API_BASE_URL=https://your-backend-url
-```
+`https://dishnicns.github.io/Daralla/`
 
 ## Dashboard
 

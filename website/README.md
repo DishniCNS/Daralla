@@ -7,15 +7,9 @@ Next.js marketing site for Daralla with:
 - Portfolio grid
 - Portfolio project pages
 - About
-- Contact form posting to the backend API
+- Contact page that prepares a structured request email without requiring a backend
 
-## Environment
-
-Copy `.env.example` to `.env.local` and point it at the backend server:
-
-```bash
-copy .env.example .env.local
-```
+The public build is configured for static export so it can be deployed on GitHub Pages.
 
 ## Run locally
 

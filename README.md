@@ -33,7 +33,7 @@ This repository now includes:
 
 - root `.gitignore` for Node, Python, env files, and local logs
 - GitHub Actions CI workflow for `website`, `backend`, `dashboard`, and the portfolio generator
-- GitHub Pages workflow for publishing the generated `portfolio`
+- GitHub Pages workflow for publishing the public `website`
 
 See [DEPLOYMENT.md](./DEPLOYMENT.md) for the recommended free hosting setup.
 
@@ -51,7 +51,6 @@ npm install
 
 ```bash
 cd website
-copy .env.example .env.local
 npm install
 ```
 
@@ -105,7 +104,7 @@ python generate_portfolio.py example_projects.json --output ..\\..\\portfolio
 
 ## Recommended Free Hosting
 
-- `portfolio` -> GitHub Pages
-- `website` -> Vercel Hobby
+- `website` -> GitHub Pages
+- `portfolio` -> internal static archive or secondary showcase build
 - `dashboard` -> Vercel Hobby or Cloudflare Pages
 - `backend` -> free Node-compatible host + MongoDB Atlas free tier

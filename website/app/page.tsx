@@ -16,13 +16,14 @@ export default function Home() {
               Digital Studio / Since 2019
             </p>
             <h1 className="max-w-4xl font-display text-5xl leading-none tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-              Daralla crafts cinematic digital experiences for brands building
-              what&apos;s next.
+              Daralla designs and builds the full digital layer around modern
+              brands, products, and launch ideas.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              We blend strategy, code, motion, and real-time visuals to create
-              websites, product launches, and interactive worlds with a sharp
-              futuristic edge.
+              From conversion-ready websites and portfolio systems to 3D
+              visualization, motion graphics, and interactive concepts, we turn
+              ambitious ideas into polished digital experiences that feel
+              premium from the first click.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -46,7 +47,8 @@ export default function Home() {
                 Focus
               </p>
               <p className="mt-3 text-2xl font-display tracking-[-0.03em] text-white">
-                Bold interfaces for ambitious products.
+                One studio for web, visual systems, launch content, and
+                immersive product storytelling.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 rounded-[1.5rem] border border-white/10 bg-white/[0.02] p-6">

@@ -19,6 +19,12 @@ export function SiteFooter() {
             Creative technology studio for brands that want a sharper digital
             presence and launch-ready visual identity.
           </p>
+          <a
+            href="mailto:hello@daralla.studio"
+            className="mt-5 inline-flex text-sm uppercase tracking-[0.18em] text-cyan-200 transition-colors hover:text-white"
+          >
+            hello@daralla.studio
+          </a>
         </div>
         <div className="flex flex-wrap gap-4">
           {footerLinks.map((item) => (

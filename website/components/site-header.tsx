@@ -14,6 +14,14 @@ const navItems = [
 export function SiteHeader() {
   const pathname = usePathname();
 
+  function isActiveLink(href: string) {
+    if (href === "/") {
+      return pathname === href;
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 md:px-10">
@@ -22,7 +30,7 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] p-2 md:flex">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = isActiveLink(item.href);
 
             return (
               <Link
@@ -48,7 +56,7 @@ export function SiteHeader() {
       </div>
       <nav className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-6 pb-4 md:hidden">
         {navItems.map((item) => {
-          const isActive = pathname === item.href;
+          const isActive = isActiveLink(item.href);
 
           return (
             <Link

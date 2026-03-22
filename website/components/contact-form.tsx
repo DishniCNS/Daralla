@@ -17,8 +17,28 @@ const initialFormState = {
   budget: "",
 };
 
-const apiBaseUrl =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:4000";
+const studioEmail = "hello@daralla.studio";
+
+function buildRequestSummary(formState: typeof initialFormState) {
+  return [
+    "Daralla Project Request",
+    "",
+    `Client name: ${formState.clientName}`,
+    `Email: ${formState.email}`,
+    `Project type: ${formState.projectType}`,
+    `Budget: ${formState.budget}`,
+    "",
+    "Project description:",
+    formState.description,
+  ].join("\n");
+}
+
+function buildMailtoUrl(formState: typeof initialFormState) {
+  const subject = `Daralla project request: ${formState.projectType}`;
+  const body = buildRequestSummary(formState);
+
+  return `mailto:${studioEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 export function ContactForm() {
   const [formState, setFormState] = useState(initialFormState);
@@ -42,28 +62,21 @@ export function ContactForm() {
     event.preventDefault();
     setFeedback(null);
 
-    startTransition(async () => {
+    startTransition(() => {
       try {
-        const response = await fetch(`${apiBaseUrl}/api/client-requests`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formState),
-        });
+        const requestSummary = buildRequestSummary(formState);
+        const mailtoUrl = buildMailtoUrl(formState);
 
-        if (!response.ok) {
-          const payload = (await response.json().catch(() => null)) as
-            | { message?: string }
-            | null;
-          throw new Error(payload?.message || "Failed to submit your request.");
+        if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+          void navigator.clipboard.writeText(requestSummary).catch(() => {});
         }
 
+        window.location.href = mailtoUrl;
         setFormState(initialFormState);
         setFeedback({
           tone: "success",
           message:
-            "Request sent. Daralla will review it and respond within 48 hours.",
+            "Your email app should open with a prepared project brief. The request text was also copied to your clipboard when supported.",
         });
       } catch (error) {
         setFeedback({
@@ -71,7 +84,7 @@ export function ContactForm() {
           message:
             error instanceof Error
               ? error.message
-              : "Something went wrong while sending your request.",
+              : "Unable to prepare the request email on this device.",
         });
       }
     });
@@ -178,7 +191,7 @@ export function ContactForm() {
         disabled={isPending}
         className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-medium uppercase tracking-[0.18em] text-slate-950 transition-transform duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {isPending ? "Sending..." : "Send Request"}
+        {isPending ? "Preparing..." : "Open Email Request"}
       </button>
     </form>
   );

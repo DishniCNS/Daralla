@@ -13,7 +13,7 @@ export default function ContactPage() {
       <SectionHeading
         eyebrow="Contact"
         title="Tell us what you want to build"
-        description="Share the project scope, intended launch window, and budget range. We will use it to shape the right production path."
+        description="Share the scope, goals, and budget. Daralla will prepare a structured request email so you can send the brief instantly from desktop or phone."
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
@@ -30,9 +30,11 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                Response Time
+                How It Works
               </p>
-              <p className="mt-2 text-lg text-white">Usually within 48 hours</p>
+              <p className="mt-2 text-lg text-white">
+                A ready-to-send email draft opens instantly
+              </p>
             </div>
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
@@ -41,6 +43,12 @@ export default function ContactPage() {
               <p className="mt-2 text-lg text-white">
                 Product sites, campaign worlds, immersive showcases
               </p>
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
+                Response Time
+              </p>
+              <p className="mt-2 text-lg text-white">Usually within 48 hours</p>
             </div>
           </div>
         </aside>
