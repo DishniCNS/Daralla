@@ -28,11 +28,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${spaceGrotesk.variable} ${syne.variable} bg-[#070916] antialiased`}
+        className={`${spaceGrotesk.variable} ${syne.variable} bg-[#090b17] antialiased`}
       >
-        <div className="min-h-screen bg-[linear-gradient(180deg,#070916_0%,#0b1031_48%,#05060f_100%)] text-white">
-          <div className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-70" />
-          <div className="pointer-events-none fixed inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(129,140,248,0.16),transparent)]" />
+        <div className="min-h-screen bg-[#090b17] text-white">
+          <div className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(129,140,248,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(129,140,248,0.05)_1px,transparent_1px)] bg-[size:48px_48px] opacity-40" />
           <SiteHeader />
           <main className="relative mx-auto max-w-7xl px-6 pt-12 md:px-10 md:pt-16">
             {children}
