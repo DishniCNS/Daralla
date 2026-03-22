@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #070916;
+  --foreground: #f4f6ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-space-grotesk);
-  --font-display: var(--font-syne);
+  --font-display: var(--font-space-grotesk);
 }
 
 * {
@@ -26,22 +26,33 @@ body {
   font-family: var(--font-space-grotesk), sans-serif;
   min-height: 100vh;
   background-image:
-    radial-gradient(circle at top, rgba(76, 105, 255, 0.15), transparent 24%),
-    radial-gradient(circle at 80% 18%, rgba(29, 205, 159, 0.1), transparent 20%),
-    linear-gradient(180deg, #020617, #02030a 50%, #020617);
+    linear-gradient(180deg, rgba(120, 124, 255, 0.12), transparent 18%),
+    linear-gradient(90deg, rgba(90, 100, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(90, 100, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, #070916 0%, #0b1031 48%, #05060f 100%);
+  background-size: auto, 32px 32px, 32px 32px, auto;
 }
 
 a,
 button,
 input,
-textarea {
+textarea,
+select {
   transition-property: color, background-color, border-color, transform,
     opacity, box-shadow;
   transition-duration: 200ms;
 }
 
+a[class],
+button,
+input,
+textarea,
+select {
+  border-radius: 0 !important;
+}
+
 ::selection {
-  background: rgba(56, 189, 248, 0.28);
+  background: rgba(99, 102, 241, 0.4);
   color: #f8fafc;
 }
 
@@ -67,25 +78,34 @@ textarea {
 
 .glass-panel {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
-    rgba(8, 14, 28, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 25px 80px rgba(2, 6, 23, 0.32);
-  backdrop-filter: blur(18px);
+    linear-gradient(180deg, rgba(27, 35, 93, 0.9), rgba(9, 12, 31, 0.98)),
+    #090d23;
+  border: 2px solid rgba(139, 149, 255, 0.7);
+  box-shadow:
+    12px 12px 0 rgba(2, 6, 23, 0.92),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  backdrop-filter: none;
+  position: relative;
 }
 
 .studio-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 64px 64px;
+    linear-gradient(rgba(129, 140, 248, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 140, 248, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 .project-sheen::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.12), transparent 80%);
+  background: linear-gradient(
+    120deg,
+    transparent 18%,
+    rgba(99, 102, 241, 0.28) 36%,
+    rgba(191, 219, 254, 0.12) 52%,
+    transparent 72%
+  );
   transform: translateX(-120%);
   transition: transform 600ms ease;
 }

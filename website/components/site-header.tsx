@@ -23,12 +23,16 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b-2 border-indigo-300/70 bg-[#090d23]/95 shadow-[0_12px_0_rgba(2,6,23,0.85)] backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 md:px-10">
-        <Link href="/" className="font-display text-2xl tracking-[0.24em] text-white">
+        <Link
+          href="/"
+          className="border-2 border-indigo-300/70 bg-indigo-500/15 px-4 py-2 font-display text-2xl font-semibold tracking-[0.24em] text-white shadow-[6px_6px_0_rgba(2,6,23,0.9)]"
+        >
           DARALLA
         </Link>
-        <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] p-2 md:flex">
+
+        <nav className="hidden items-center gap-2 border-2 border-indigo-300/60 bg-[#10163a] p-2 shadow-[8px_8px_0_rgba(2,6,23,0.88)] md:flex">
           {navItems.map((item) => {
             const isActive = isActiveLink(item.href);
 
@@ -36,10 +40,10 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm uppercase tracking-[0.18em] transition-colors ${
+                className={`border px-4 py-2 text-sm font-medium uppercase tracking-[0.18em] transition-colors ${
                   isActive
-                    ? "bg-white text-slate-950"
-                    : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+                    ? "border-indigo-200 bg-indigo-100 text-slate-950 shadow-[4px_4px_0_rgba(2,6,23,0.95)]"
+                    : "border-indigo-300/25 bg-transparent text-slate-300 hover:border-indigo-200/60 hover:bg-indigo-400/10 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -47,13 +51,15 @@ export function SiteHeader() {
             );
           })}
         </nav>
+
         <Link
           href="/contact"
-          className="hidden rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm uppercase tracking-[0.18em] text-cyan-100 transition-colors hover:border-cyan-200/60 hover:text-white md:inline-flex"
+          className="hidden border-2 border-indigo-200 bg-indigo-300 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[6px_6px_0_rgba(2,6,23,0.92)] transition-transform hover:-translate-x-[1px] hover:-translate-y-[1px] md:inline-flex"
         >
           Запрос
         </Link>
       </div>
+
       <nav className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-6 pb-4 md:hidden">
         {navItems.map((item) => {
           const isActive = isActiveLink(item.href);
@@ -62,10 +68,10 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.18em] whitespace-nowrap ${
+              className={`border-2 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] whitespace-nowrap ${
                 isActive
-                  ? "border-white bg-white text-slate-950"
-                  : "border-white/10 bg-white/[0.03] text-slate-300"
+                  ? "border-indigo-200 bg-indigo-100 text-slate-950 shadow-[4px_4px_0_rgba(2,6,23,0.95)]"
+                  : "border-indigo-300/35 bg-[#10163a] text-slate-200"
               }`}
             >
               {item.label}
