@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+  <rect width="1400" height="1000" fill="#120712" />
+  <path d="M0 620 C250 360 430 780 700 520 S1120 260 1400 480" stroke="#67e8f9" stroke-width="16" fill="none" stroke-linecap="round" />
+  <path d="M0 690 C250 430 430 850 700 590 S1120 330 1400 550" stroke="#c084fc" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.8" />
+  <text x="130" y="230" fill="#f8fafc" font-family="Arial, sans-serif" font-size="72" font-weight="700">Pulse Zero</text>
+  <text x="130" y="295" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="28">Motion toolkit for a fintech launch.</text>
+</svg>

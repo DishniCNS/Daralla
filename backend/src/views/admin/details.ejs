@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back-link" href="/admin/requests">&larr; Back to dashboard</a>
+
+      <section class="detail-shell">
+        <article class="detail-card">
+          <div class="card-top">
+            <div>
+              <p class="eyebrow">Project Details</p>
+              <h1><%= project.clientName %></h1>
+            </div>
+            <span class="badge badge-<%= project.status.replace(/\s+/g, "-") %>">
+              <%= project.status %>
+            </span>
+          </div>
+
+          <dl class="detail-grid">
+            <div>
+              <dt>Email</dt>
+              <dd><%= project.email %></dd>
+            </div>
+            <div>
+              <dt>Project Type</dt>
+              <dd><%= project.projectType %></dd>
+            </div>
+            <div>
+              <dt>Budget</dt>
+              <dd><%= project.budget %></dd>
+            </div>
+            <div>
+              <dt>Submitted</dt>
+              <dd><%= new Date(project.createdAt).toLocaleString() %></dd>
+            </div>
+            <div>
+              <dt>Last Updated</dt>
+              <dd><%= new Date(project.updatedAt).toLocaleString() %></dd>
+            </div>
+            <div>
+              <dt>Project ID</dt>
+              <dd><%= project.id %></dd>
+            </div>
+          </dl>
+
+          <section class="description-panel">
+            <h2>Description</h2>
+            <p><%= project.description %></p>
+          </section>
+        </article>
+
+        <aside class="detail-card">
+          <p class="eyebrow">Change Status</p>
+          <form method="POST" action="/admin/requests/<%= project.id %>/status" class="stack-form">
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <% statusOptions.forEach((status) => { %>
+              <option value="<%= status %>" <%= project.status === status ? "selected" : "" %>>
+                <%= status %>
+              </option>
+              <% }) %>
+            </select>
+            <button type="submit">Save Status</button>
+          </form>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Admin Dashboard</p>
+          <h1>Client Requests</h1>
+          <p class="lead">
+            Review project requests, inspect details, and move each project
+            through the pipeline.
+          </p>
+        </div>
+        <form method="GET" action="/admin/requests" class="filter-card">
+          <label for="status">Filter by status</label>
+          <div class="filter-row">
+            <select id="status" name="status">
+              <option value="">All statuses</option>
+              <% statusOptions.forEach((status) => { %>
+              <option value="<%= status %>" <%= currentStatus === status ? "selected" : "" %>>
+                <%= status %>
+              </option>
+              <% }) %>
+            </select>
+            <button type="submit">Apply</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="list-grid">
+        <% if (!projects.length) { %>
+        <article class="card">
+          <h2>No projects found</h2>
+          <p>No client requests match the current filter.</p>
+        </article>
+        <% } %>
+
+        <% projects.forEach((project) => { %>
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <p class="muted"><%= project.projectType %></p>
+              <h2><%= project.clientName %></h2>
+            </div>
+            <span class="badge badge-<%= project.status.replace(/\s+/g, "-") %>">
+              <%= project.status %>
+            </span>
+          </div>
+
+          <dl class="meta">
+            <div>
+              <dt>Email</dt>
+              <dd><%= project.email %></dd>
+            </div>
+            <div>
+              <dt>Budget</dt>
+              <dd><%= project.budget %></dd>
+            </div>
+            <div>
+              <dt>Created</dt>
+              <dd><%= new Date(project.createdAt).toLocaleString() %></dd>
+            </div>
+          </dl>
+
+          <p class="description"><%= project.description %></p>
+
+          <form method="POST" action="/admin/requests/<%= project.id %>/status" class="status-form">
+            <select name="status">
+              <% statusOptions.forEach((status) => { %>
+              <option value="<%= status %>" <%= project.status === status ? "selected" : "" %>>
+                <%= status %>
+              </option>
+              <% }) %>
+            </select>
+            <button type="submit">Update</button>
+          </form>
+
+          <a class="details-link" href="/admin/requests/<%= project.id %>">View details</a>
+        </article>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>

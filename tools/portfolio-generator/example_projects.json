@@ -1,0 +1,20 @@
+{
+  "studio_name": "Daralla",
+  "projects": [
+    {
+      "project_title": "Obsidian Interface",
+      "description": "A futuristic brand site exploring deep-space visual language, motion-led storytelling, and a premium editorial layout for a design-led technology launch.",
+      "category": "Website Design",
+      "image_folder": "example_assets/obsidian-interface",
+      "technologies_used": ["Python", "HTML", "CSS", "Static Generation"],
+      "project_summary": "A launch-ready project page that frames a high-tech website concept through cinematic copy, modular content, and a focused gallery."
+    },
+    {
+      "project_title": "Solar Frame",
+      "description": "A launch-ready portfolio page for a visual campaign with cinematic stills, modular content sections, and a dense image gallery built for studio publishing workflows.",
+      "category": "Motion Graphics",
+      "image_folder": "example_assets/solar-frame",
+      "technologies_used": ["Python", "Responsive Layout", "Image Copying"]
+    }
+  ]
+}

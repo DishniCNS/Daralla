@@ -1,0 +1,1 @@
+"""Static portfolio generator package."""
